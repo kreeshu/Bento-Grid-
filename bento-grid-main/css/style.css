@@ -1,0 +1,31 @@
+.container {
+    display: grid;
+    /* height: 95vh;
+    width: 95vw; */
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: repeat(10, 1fr);
+
+
+}
+.card-1 {
+    grid-area: 1/1/6/3 ;
+    background-color: pink;
+    padding: 20px;
+    display : flex;
+    flex-direction: column;
+
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.card-1 h1 {
+    font-size: 30px;
+    font-weight: bolder;
+}
+.card-1 img {
+    width: 70%;
+    margin: 0 auto;
+}

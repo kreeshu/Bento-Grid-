@@ -1,31 +1,232 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic');
+
+/* Reset and global styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; /* Fixed from border to border-box */
+  font-family: "Poppins", sans-serif;
+}
+
+/* Container styling */
 .container {
-    display: grid;
-    /* height: 95vh;
-    width: 95vw; */
-    grid-template-rows: repeat(10, 1fr);
-    grid-template-columns: repeat(10, 1fr);
-
-
+  max-width: 1320px;
+  width: 100%;
+  margin-inline: auto;
+  padding: 50px 0;
 }
+
+@media (max-width: 1336px) {
+  .container {
+    max-width: 95%;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-areas: 
+    "grid1 grid2 grid2 grid3"
+    "grid1 grid2 grid2 grid3"
+    "grid1 grid2 grid2 grid3"
+    "grid1 grid2 grid2 grid3"
+    "grid1 grid4 grid5 grid3"
+    "grid6 grid4 grid5 grid3"
+    "grid6 grid4 grid5 grid3"
+    "grid6 grid7 grid8 grid8"
+    "grid6 grid7 grid8 grid8"
+    "grid6 grid7 grid8 grid8";
+  grid-gap: 30px;
+}
+
+
+.card-1 { grid-area: grid1; }
+.card-purple { grid-area: grid2; }
+.card-light-purple { grid-area: grid3; }
+.card-yellow { grid-area: grid4; }
+.account-manager { grid-area: grid5; }
+.card-white { grid-area: grid6; }
+.card-yellow2 { grid-area: grid7; }
+.card-purple2 { grid-area: grid8; }
+
+/* General card styling */
+.container div {
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content to the top */
+  align-items: flex-start; /* Align content to the left */
+}
+
+/* Card-specific styles */
 .card-1 {
-    grid-area: 1/1/6/3 ;
-    background-color: pink;
-    padding: 20px;
-    display : flex;
-    flex-direction: column;
-
-}
-
-img {
-    width: 100%;
-    height: auto;
+  background-color: #FFF5B7; /* Light yellow */
+  color: #2D3748;
 }
 
 .card-1 h1 {
-    font-size: 30px;
-    font-weight: bolder;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
 }
+
+.card-1 h1 span {
+  color: #6B46C1; /* Purple for "Quicker" */
+}
+
 .card-1 img {
-    width: 70%;
-    margin: 0 auto;
+  margin-top: auto; /* Push image to the bottom */
+  max-width: 100%;
+  height: auto;
+}
+
+.card-purple {
+  background-color: #6B46C1; /* Purple */
+  color: white;
+}
+
+.card-purple h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.card-purple .stars {
+  margin: 10px 0;
+}
+
+.card-purple .reviews {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.card-light-purple {
+  background-color: #E9D8FD; /* Light purple */
+  color: #2D3748;
+}
+
+.card-light-purple h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.card-light-purple img {
+  margin: 10px 0;
+  max-width: 100%;
+  height: auto;
+}
+
+.card-light-purple p {
+  font-size: 0.9rem;
+}
+
+.card-yellow {
+  background-color: #F6E05E; /* Yellow */
+  color: #2D3748;
+}
+
+.card-yellow h4 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.card-yellow img {
+  margin-top: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
+.account-manager {
+  background-color: white;
+  color: #2D3748;
+}
+
+.account-manager p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.account-manager img {
+  margin-top: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
+.card-white {
+  background-color: white;
+  color: #2D3748;
+}
+
+.card-white h4 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2D3748;
+}
+
+.card-white p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.card-white img {
+  margin-top: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
+.card-yellow2 {
+  background-color: #F6E05E; /* Yellow */
+  color: #2D3748;
+}
+
+.card-yellow2 h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.card-yellow2 .calendar {
+  margin-top: 10px;
+}
+
+.card-yellow2 .calendar p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.card-yellow2 .checklist img {
+  margin-top: 5px;
+  max-width: 100%;
+  height: auto;
+}
+
+.card-purple2 {
+  background-color: #6B46C1; /* Purple */
+  color: white;
+}
+
+.card-purple2 h6 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.card-purple2 .calendar {
+  margin-top: 10px;
+}
+
+.card-purple2 .calendar p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.card-purple2 .checklist img {
+  margin-top: 5px;
+  max-width: 100%;
+  height: auto;
 }
